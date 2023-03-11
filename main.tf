@@ -33,7 +33,7 @@ resource "aws_instance" "blog" {
   ami           = data.aws_ami.app_ami.id
   instance_type = var.instance_type
   
-  vpc_security_group = [module.blog_sg.security_gtoup_id]
+  vpc_security_group = [module.blog_sg.security_group_id]
     
   tags = {
     Name = "HelloWorld"
